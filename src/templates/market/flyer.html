@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buteos Systems - Products</title>
+    <style>
+        :root {
+            --primary: #13699a;
+            --primary-light: #3b82f6;
+            --accent: #7c3aed;
+            --accent-blue: #3b82f6;
+            --text: #ffffff;
+            --text-light: #e0e0e0;
+            --background: #0a0a0a;
+            --background-alt: #1a1a1a;
+            --card-bg: #222222;
+            --card-hover: #22c2e5;
+            --card-text: #ffffff;
+            --card-shadow: rgba(34, 194, 229, 0.3);
+        }
+
+        /* Basic Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Flyer Container */
+        .flyer-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: var(--background);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            border: 1px solid var(--background-alt);
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        /* Header Area */
+        .header-area {
+            padding: 35px 40px 25px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--background), var(--background-alt));
+            position: relative;
+        }
+        
+        .header-area::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+        }
+        
+        .header-area .logo img {
+            max-width: 180px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+        
+        .header-area h1 {
+            font-size: 38px;
+            color: var(--text);
+            margin: 0 0 10px 0;
+            line-height: 1.2;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            letter-spacing: -0.5px;
+        }
+
+        /* Primary Visual Space */
+        .primary-visual {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .primary-visual img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .primary-visual::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--accent-blue));
+        }
+
+        /* Content Area */
+        .content-area {
+            padding: 40px 40px 30px;
+            background: linear-gradient(180deg, var(--background), var(--background-alt));
+        }
+
+        /* Key Benefits Section */
+        .key-benefits h2 {
+            font-size: 26px;
+            color: var(--primary);
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 2px solid var(--background-alt);
+            padding-bottom: 12px;
+            position: relative;
+        }
+        
+        .key-benefits h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+        
+        .key-benefits ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .key-benefits li {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            background-color: var(--card-bg);
+            border-radius: 6px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .key-benefits li:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px var(--card-shadow);
+            border-left: 3px solid var(--card-hover);
+        }
+        
+        .key-benefits .benefit-icon {
+            margin-right: 15px;
+            font-size: 24px;
+            color: var(--accent-blue);
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--accent-blue));
+            padding: 35px 40px;
+            text-align: center;
+            margin-top: 20px;
+            position: relative;
+            color: var(--text);
+        }
+        
+        .cta-section h3 {
+            font-size: 24px;
+            color: var(--text);
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        .cta-section p {
+            font-size: 17px;
+            margin-bottom: 25px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* QR Code Section */
+        .qr-code-area {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            background-color: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .qr-code-area img {
+            width: 150px;
+            height: 150px;
+            border: 5px solid var(--text);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+        
+        .qr-code-area img:hover {
+            transform: scale(1.03);
+        }
+        
+        .qr-instruction {
+            font-size: 17px;
+            font-weight: bold;
+            color: var(--text);
+            max-width: 250px;
+        }
+        
+        .qr-instruction p {
+            margin: 0;
+            color: var(--text);
+        }
+
+        /* Contact Info Section */
+        .contact-info {
+            text-align: center;
+            padding: 30px 40px;
+            background-color: var(--card-bg);
+            position: relative;
+        }
+        
+        .contact-info p {
+            margin: 8px 0;
+            font-size: 16px;
+            color: var(--text);
+        }
+        
+        .contact-info a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s ease;
+            border-bottom: 1px dotted rgba(59, 130, 246, 0.5);
+            padding-bottom: 2px;
+        }
+        
+        .contact-info a:hover {
+            color: var(--card-hover);
+            border-bottom-color: var(--card-hover);
+        }
+
+        /* Footer Branding */
+        .footer-branding {
+            text-align: center;
+            padding: 15px 40px;
+            background-color: var(--background-alt);
+            border-top: 1px solid var(--background-alt);
+        }
+        
+        .footer-branding p {
+            margin: 0;
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* Responsive Adjustments */
+        @media screen and (max-width: 600px) {
+            .flyer-container {
+                margin: 0 auto;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            
+            .header-area, .content-area, .cta-section, .contact-info, .footer-branding {
+                padding: 20px;
+            }
+            
+            .header-area h1 {
+                font-size: 28px;
+            }
+            
+            .key-benefits h2 {
+                font-size: 22px;
+            }
+            
+            .key-benefits li {
+                font-size: 16px;
+                padding: 8px 12px;
+            }
+            
+            .cta-section h3 {
+                font-size: 20px;
+            }
+            
+            .qr-code-area {
+                flex-direction: column;
+                padding: 15px;
+            }
+            
+            .qr-code-area img {
+                margin-bottom: 15px;
+            }
+            
+            .qr-instruction {
+                text-align: center;
+                max-width: none;
+            }
+        }
+
+        /* Add Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+    </style>
+</head>
+<body>
+    <div class="flyer-container">
+        <div class="header-area">
+            <div class="logo">
+                <img src="https://storage.googleapis.com/buteos-res/bs_logo_nobg.png" alt="Buteos Systems">
+            </div>
+            <h1>Unlock Effortless Design Today!</h1>
+        </div>
+
+        <div class="primary-visual">
+            <div style="background-color:var(--background-alt); height:300px; display:flex; align-items:center; justify-content:center; color:var(--text); font-size:18px; position:relative; overflow:hidden;">
+                <div style="position:absolute; top:0; left:0; right:0; bottom:0; background:linear-gradient(45deg, rgba(19, 105, 154, 0.2), rgba(124, 58, 237, 0.1)); z-index:1;"></div>
+                <span style="position:relative; z-index:2; font-weight:500;">[Primary Visual Placeholder - e.g., 800x300]</span>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <div class="key-benefits">
+                <h2>Why Choose Buteos Systems?</h2>
+                <ul>
+                    <li>
+                        <span class="benefit-icon">&#10004;</span> 
+                        <span>Boost Productivity by X%</span>
+                    </li>
+                    <li>
+                        <span class="benefit-icon">&#10004;</span>
+                        <span>Simplify [Complex Process]</span>
+                    </li>
+                    <li>
+                        <span class="benefit-icon">&#10004;</span>
+                        <span>Gain Actionable Insights Instantly</span>
+                    </li>
+                    <li>
+                        <span class="benefit-icon">&#10004;</span>
+                        <span>Trusted by Industry Leaders</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h3>Discover How We Can Transform Your Business</h3>
+            <p>
+                Take the next step to [achieve desired outcome]. We're offering a free evaluation to businesses ready to innovate.
+            </p>
+
+            <div class="qr-code-area">
+                <img src="https://storage.googleapis.com/buteos-res/bscom.png" alt="buteossystems.com">
+                <div class="qr-instruction">
+                    <p><strong>Scan to Learn More</strong></p>
+                    <p style="font-size:14px; margin-top:8px; font-weight:normal;">Visit our website for exclusive resources and insights</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <p><a href="https://buteossystems.com">buteossystems.com</a></p>
+            <p>Call us: 832-802-0429 | Email: <a href="mailto:seth@buteossystems.com">seth@buteossystems.com</a></p>
+        </div>
+
+        <div class="footer-branding">
+            <p style="font-size:12px; color:var(--text-light);">&copy; 2025 Buteos Systems. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

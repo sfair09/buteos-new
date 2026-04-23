@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Email Template</title>
+    <style type="text/css">
+        /* Color Theme Variables */
+        :root {
+            --primary: #13699a;
+            --primary-light: #3b82f6;
+            --accent: #7c3aed;
+            --accent-blue: #3b82f6;
+            --text: #ffffff;
+            --text-light: #e0e0e0;
+            --background: #0a0a0a;
+            --background-alt: #1a1a1a;
+            --card-bg: #222222;
+            --card-hover: #22c2e5;
+            --card-text: #ffffff;
+            --card-shadow: rgba(34, 194, 229, 0.3);
+        }
+
+        /* Basic Reset */
+        body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+        table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table { border-collapse: collapse !important; }
+        body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+        /* Mobile Responsive Styles */
+        @media screen and (max-width: 600px) {
+            .email-container {
+                width: 100% !important;
+                margin: auto !important;
+            }
+            .fluid, .fluid-centered {
+                max-width: 100% !important;
+                height: auto !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            .stack-column, .stack-column-center {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                direction: ltr !important;
+            }
+            .stack-column-center {
+                text-align: center !important;
+            }
+            /* Adjustments for smaller screens */
+            .header-logo img {
+                max-width: 150px !important; /* Smaller logo for mobile */
+            }
+            .cta-button a {
+                padding: 12px 20px !important;
+                font-size: 16px !important;
+            }
+        }
+
+        /* Main Styles */
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: #0a0a0a; /* Using background variable */
+            color: #ffffff; /* Using text variable */
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .email-body {
+            background-color: #0a0a0a; /* Using background variable */
+        }
+        .preheader {
+            display: none;
+            font-size: 1px;
+            color: #ffffff;
+            line-height: 1px;
+            max-height: 0px;
+            max-width: 0px;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .header-logo {
+            padding: 25px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #0a0a0a, #1a1a1a); /* Using background variables */
+        }
+        .header-logo img {
+            max-width: 200px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+        .content-padding {
+            padding: 25px 30px; /* Padding for content sections */
+        }
+        h1, h2, h3 {
+            margin-top: 0;
+            color: #ffffff; /* Using text variable */
+        }
+        h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .highlight-text {
+            color: #3b82f6; /* Using primary-light variable */
+            font-weight: 500;
+        }
+        .content-section {
+            background-color: #222222; /* Using card-bg variable */
+            border-radius: 6px;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-left: 3px solid #13699a; /* Using primary variable */
+        }
+        .cta-button table {
+            margin: 25px auto; /* Center button table */
+        }
+        .cta-button a {
+            background: linear-gradient(135deg, #13699a, #3b82f6); /* Using primary and primary-light variables */
+            color: #ffffff !important;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(34, 194, 229, 0.3); /* Using card-shadow variable */
+            transition: all 0.3s ease;
+        }
+        .social-proof {
+            font-style: italic;
+            color: #e0e0e0; /* Using text-light variable */
+            font-size: 14px;
+            padding-top: 15px;
+            border-top: 1px solid #1a1a1a; /* Using background-alt variable */
+            margin-top: 20px;
+        }
+        .signature {
+            padding-top: 20px;
+            color: #ffffff; /* Using text variable */
+            border-top: 1px solid #1a1a1a; /* Using background-alt variable */
+            margin-top: 20px;
+        }
+        .signature p {
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+        .signature a {
+            color: #3b82f6; /* Using primary-light variable */
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(59, 130, 246, 0.5);
+            padding-bottom: 1px;
+        }
+        .footer {
+            padding: 20px 30px;
+            font-size: 12px;
+            color: #e0e0e0; /* Using text-light variable */
+            text-align: center;
+            background-color: #1a1a1a; /* Using background-alt variable */
+            border-top: 3px solid #13699a; /* Using primary variable */
+        }
+        .footer a {
+            color: #3b82f6; /* Using primary-light variable */
+            text-decoration: none;
+        }
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #13699a, transparent); /* Using primary variable */
+            margin: 10px 0 20px;
+        }
+    </style>
+</head>
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #0a0a0a;">
+    <center style="width: 100%; background-color: #0a0a0a;">
+        <div class="preheader" style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+            Transform your hospitality or retail business with Buteos Systems' strategic digital solutions.
+        </div>
+
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="margin: auto; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.3);" class="email-container">
+            <tr>
+                <td style="background-color: #0a0a0a;" class="email-body">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                            <td class="header-logo" style="padding: 25px 0; text-align: center;">
+                                <img src="https://storage.googleapis.com/buteos-res/bs_logo_nobg.png" alt="Buteos Systems" style="max-width: 200px;">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="padding: 0;">
+                                <div style="height: 4px; background: linear-gradient(90deg, #13699a, #3b82f6);"></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="padding: 25px 30px;" class="content-padding">
+                                <h2 style="margin-top:0; font-size: 22px; color: #ffffff;">Dear [Prospect Name],</h2>
+                                <p style="margin-bottom: 15px;">
+                                    I was impressed by <span class="highlight-text">[Prospect's Business]'s</span> commitment to customer experience in the competitive <span class="highlight-text">[hospitality/retail]</span> space. In today's digital-first market, standing out requires more than just an online presence—it demands a comprehensive digital strategy.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="padding: 0 30px;" class="content-padding">
+                                <div class="content-section">
+                                    <p style="margin-top: 0; margin-bottom: 15px;">
+                                        At <strong>Buteos Systems</strong>, we specialize in providing strategic digital solutions that help <span class="highlight-text">[hospitality/retail]</span> businesses overcome common challenges:
+                                    </p>
+                                    <ul style="padding-left: 20px; margin-bottom: 15px;">
+                                        <li style="margin-bottom: 10px;">Inconsistent online visibility that leads to missed opportunities</li>
+                                        <li style="margin-bottom: 10px;">Difficulty competing with larger chains for local search traffic</li>
+                                        <li style="margin-bottom: 10px;">Ineffective social media presence that fails to drive foot traffic</li>
+                                        <li style="margin-bottom: 10px;">Inability to gather and leverage customer data for personalized marketing</li>
+                                    </ul>
+                                    <p style="margin-bottom: 0;">
+                                        Our clients typically see <span class="highlight-text">30-50% increases in direct bookings/sales</span> and <span class="highlight-text">significant reductions in third-party commission fees</span> when implementing our comprehensive digital strategy.
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="padding: 0 30px 20px 30px;" class="content-padding">
+                                <h3 style="color: #3b82f6; font-size: 18px; margin-bottom: 15px;">Our Three-Tier Approach:</h3>
+                                <ul style="padding-left: 20px; margin-bottom: 20px;">
+                                    <li style="margin-bottom: 10px;"><strong>Digital Foundation:</strong> Establish a professional online footprint with managed website, local SEO optimization, Google Business Profile management, and strategic social media presence.</li>
+                                    <li style="margin-bottom: 10px;"><strong>Growth Partnership:</strong> Drive measurable results with advanced SEO, content marketing, targeted advertising campaigns, and email marketing to build customer loyalty.</li>
+                                    <li style="margin-bottom: 10px;"><strong>Digital Transformation:</strong> Implement custom AI solutions for personalized customer experiences, advanced analytics dashboards for data-driven decisions, and strategic quarterly business reviews.</li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="padding: 0 30px 20px 30px; text-align: center;" class="content-padding">
+                                <div class="divider"></div>
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto;" class="cta-button">
+                                    <tr>
+                                        <td style="border-radius: 5px; background: linear-gradient(135deg, #13699a, #3b82f6); text-align: center;">
+                                            <a href="https://buteossystems.com/contact" target="_blank" style="background: linear-gradient(135deg, #13699a, #3b82f6); border: 0; font-family: 'Montserrat', sans-serif; font-size: 18px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 5px; font-weight: bold; padding: 15px 30px; color: #ffffff;">
+                                                Schedule a Strategy Call
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <p style="margin-top: 20px; margin-bottom: 0; font-size: 16px;">
+                                    I'd welcome the opportunity to discuss how we've helped similar <span class="highlight-text">[hospitality/retail]</span> businesses achieve digital dominance in their local markets. Would you be available for a brief 20-minute call next week to explore if our approach could benefit <span class="highlight-text">[Prospect's Business]</span>?
+                                </p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="padding: 25px 30px 30px 30px;" class="content-padding signature">
+                                <p style="margin-bottom: 5px;">Sincerely,</p>
+                                <p style="margin-bottom: 5px; font-weight: bold;">[Your Name]</p>
+                                <p style="margin-bottom: 5px;">Digital Strategy Consultant</p>
+                                <p style="margin-bottom: 5px;">Buteos Systems</p>
+                                <p style="margin-bottom: 5px;">[Your Phone Number]</p>
+                                <p style="margin-bottom: 5px;"><a href="[Link to Your LinkedIn Profile]" style="color: #3b82f6; text-decoration: none;">LinkedIn Profile</a></p>
+                                <p style="margin-bottom: 0;"><a href="https://buteossystems.com" style="color: #3b82f6; text-decoration: none;">buteossystems.com</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center; padding: 20px 30px; background-color: #1a1a1a;" class="footer">
+                    <p style="margin-bottom: 5px; font-size: 12px; color: #e0e0e0;">
+                        Buteos Systems | Houston, TX
+                    </p>
+                    <p style="margin-bottom: 5px; font-size: 12px; color: #e0e0e0;">
+                        <a href="https://buteossystems.com/contact" style="color: #3b82f6; text-decoration: none;">Unsubscribe</a>
+                        &nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="https://buteossystems.com/privacy" style="color: #3b82f6; text-decoration: none;">Privacy Policy</a>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

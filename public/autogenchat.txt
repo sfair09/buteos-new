@@ -1,0 +1,57 @@
+Main Services Page
+Headline: Precision Software, Unmatched Vision.
+
+Sub-headline: At Buteos Systems, we build intelligent, high-performance software solutions that give your business a critical edge. From intuitive applications to advanced AI, our systems are engineered to help you soar above the competition. Explore our offerings to find your perfect flight path.
+
+1. Buteos Nest | Web & Mobile Applications
+Tagline: Your Foundation for Digital Excellence. Scalable, Secure, and Built to Engage.
+
+Web Copy: Every great vision needs a place to hatch. Buteos Nest is our dedicated web and mobile application development service. We create stunning, intuitive, and secure platforms that serve as the core of your digital ecosystem. Whether you're launching a new idea or scaling an existing one, we build the robust, user-centric nest your business needs to thrive.
+
+Service Tiers:
+Fledgling Package (Essential Web Presence)
+
+Focus: Perfect for startups and businesses needing a professional, high-performance marketing and informational website.
+Description: Launch your digital presence with a beautifully designed, responsive website. We focus on core functionality, SEO readiness, and a content management system (CMS) that puts you in control. It's everything you need to establish credibility and start engaging your audience.
+Soar Package (Advanced Web & Mobile App)
+
+Focus: For businesses ready to offer interactive services, e-commerce, and dedicated user experiences.
+Description: Elevate your engagement with a powerful web or mobile application. This package includes everything in Fledgling, plus custom feature development, user account systems, API integrations, and e-commerce functionality. We'll build the platform that drives your core business operations.
+Aerie Package (Enterprise-Grade Platform)
+
+Focus: Complex, mission-critical applications for established businesses requiring top-tier performance, security, and scalability.
+Description: For the most demanding requirements, the Aerie package delivers a comprehensive, enterprise-grade solution. This includes multi-platform support (web, iOS, Android), advanced security protocols, cloud architecture design, and ongoing performance optimization. This is your digital fortress, built for market leadership.
+2. Buteos Flight | AI & Automation
+Tagline: Intelligence that Elevates. Automate, Analyze, and Accelerate Your Business.
+
+Web Copy: Unleash the power of artificial intelligence and automation to achieve new heights of efficiency. Buteos Flight integrates intelligent systems into your workflow to handle repetitive tasks, uncover critical insights from your data, and create smarter customer experiences. Let us equip your business with the AI-powered vision to anticipate challenges and seize opportunities faster than ever before.
+
+Service Tiers:
+Scout Package (Automation Essentials)
+
+Focus: Businesses looking to eliminate manual tasks and streamline internal processes.
+Description: We'll identify and implement powerful automation solutions for your most time-consuming workflows. From automated data entry and report generation to intelligent task routing, the Scout package frees up your team to focus on high-value work.
+Hunter Package (Intelligent Integration)
+
+Focus: Integrating AI-driven insights and decision-making into your existing software and processes.
+Description: Go beyond simple automation. The Hunter package deploys custom AI models—like chatbots for instant customer service, or predictive analytics for sales forecasting—directly into your systems. Turn your data into a proactive, intelligent asset.
+Visionary Package (Full AI Transformation)
+
+Focus: For companies seeking to build a core competitive advantage through proprietary AI technology.
+Description: Lead your industry with a fully bespoke AI agent or system. We partner with you to develop proprietary algorithms, natural language processing models, or machine learning engines that solve your most complex challenges. This is where we build the technology that defines your future.
+3. Buteos Talon | Bespoke Software Solutions
+(Using the recommended name)
+
+Tagline: Your Vision, Forged into Reality. Uncompromising Solutions for Unique Challenges.
+
+Web Copy: Some objectives require a solution as unique as the vision itself. Buteos Talon is our premier service for custom software engineering. When off-the-shelf products fall short, we become your dedicated development partner, diving deep into your operations to build a system perfectly tailored to your strategic goals.
+
+From complex enterprise resource planning (ERP) systems to entirely new technology platforms, our process is collaborative, agile, and transparent. We combine your industry expertise with our technical mastery to forge a powerful, one-of-a-kind tool that becomes your ultimate competitive advantage.
+
+How It Works:
+
+Deep Dive Discovery: We begin with a comprehensive analysis of your goals, workflow, and technical environment.
+Architectural Design: Together, we blueprint a solution focused on scalability, security, and performance.
+Agile Development Sprints: You are involved at every stage as our team brings the vision to life with iterative, transparent progress.
+Rigorous Testing & Deployment: We ensure a flawless launch and seamless integration into your operations.
+Ongoing Partnership & Support: We remain your partner for the long haul, providing support and evolution as your needs grow.

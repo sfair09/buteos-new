@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buteos Systems - Elevate Your Business Digitally</title>
+    <style>
+        /* Color Theme */
+        :root {
+            --primary: #13699a;
+            --primary-light: #3b82f6;
+            --accent: #7c3aed;
+            --accent-blue: #3b82f6;
+            --text: #ffffff;
+            --text-light: #e0e0e0;
+            --background: #0a0a0a;
+            --background-alt: #1a1a1a;
+            --card-bg: #222222;
+            --card-hover: #22c2e5;
+            --card-text: #ffffff;
+            --card-shadow: rgba(34, 194, 229, 0.3);
+        }
+
+        /* Basic Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Flyer Container */
+        .flyer-container {
+            max-width: 600px;
+            min-height: 800px;
+            margin: 30px auto;
+            background-color: var(--background-alt);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        /* Header - Holds Logo and Main Headline */
+        .flyer-header {
+            padding: 0px 0px 0px 10px;
+            text-align: right;
+            position: relative;
+            background-color: var(--background);
+            color: var(--text);
+            display: flex;
+            flex-direction: row;
+            align-items: space-between;
+        }
+
+        .flyer-logo {
+            top: 10px;
+            right: 50px;
+            width: 300px;
+            height: auto;
+        }
+        .flyer-logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .flyer-header h1 {
+            font-size: 32px;
+            margin: 10px 0 10px 0;
+            line-height: 1.25;
+            font-weight: 700;
+            max-width: calc(100% - 120px);
+            color: var(--text);
+        }
+        .flyer-header .sub-headline {
+            font-size: 18px;
+            margin: 0;
+            font-weight: 300;
+            max-width: calc(100% - 120px);
+            color: var(--text-light);
+        }
+
+        /* Primary Visual Area */
+        .primary-visual-area {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        .primary-visual-area img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .primary-visual-area::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+
+        /* Content Body */
+        .flyer-body {
+            padding: 25px 30px;
+            flex-grow: 1;
+            background-color: var(--background-alt);
+        }
+
+        .flyer-body h2 {
+            font-size: 22px;
+            color: var(--primary-light);
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .services-intro {
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .services-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+        .service-block {
+            flex-basis: calc(33.333% - 14px);
+            text-align: center;
+            padding: 15px;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .service-block:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px var(--card-shadow);
+        }
+        .service-block .icon {
+            font-size: 36px;
+            color: var(--card-hover);
+            margin-bottom: 10px;
+        }
+        .service-block h3 {
+            font-size: 18px;
+            color: var(--text);
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        .service-block p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+
+        /* Benefits Section */
+        .benefits-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 25px 0;
+        }
+        .benefits-list li {
+            font-size: 16px;
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+            color: var(--text);
+        }
+        .benefits-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: var(--card-hover);
+            font-weight: bold;
+        }
+
+        /* Footer - CTA, QR, Contact */
+        .flyer-footer {
+            padding: 25px 30px;
+            background-color: var(--card-bg);
+            color: var(--text);
+            text-align: left;
+            position: relative;
+        }
+        .footer-cta-text {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text);
+        }
+        .footer-cta-subtext {
+            font-size: 16px;
+            margin-bottom: 25px;
+            color: var(--text-light);
+        }
+
+        .qr-code-container {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            text-align: center;
+        }
+        .qr-code-container img {
+            width: 100px;
+            height: 100px;
+            border: 3px solid var(--text);
+            margin-bottom: 5px;
+            transition: transform 0.3s ease;
+        }
+        .qr-code-container img:hover {
+            transform: scale(1.05);
+        }
+        .qr-code-container p {
+            font-size: 12px;
+            color: var(--text);
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .website-url {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .website-url a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .website-url a:hover {
+            color: var(--card-hover);
+            text-decoration: underline;
+        }
+
+        /* Responsive Adjustments */
+        @media screen and (max-width: 500px) {
+            .flyer-header h1 {
+                font-size: 26px;
+                max-width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            .flyer-header .sub-headline {
+                font-size: 16px;
+                max-width: 100%;
+                text-align: center;
+            }
+            .flyer-logo {
+                position: static;
+                display: block;
+                margin: 0 auto 15px auto;
+                width: 175px;
+            }
+            .primary-visual-area {
+                height: 200px;
+            }
+            .services-grid {
+                flex-direction: column;
+            }
+            .service-block {
+                flex-basis: auto;
+                margin-bottom: 15px;
+            }
+            .flyer-footer {
+                padding-bottom: 140px;
+            }
+            .qr-code-container {
+                position: static;
+                margin: 20px auto 0 auto;
+            }
+            .qr-code-container img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        /* Add Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+    </style>
+</head>
+<body>
+    <div class="flyer-container">
+        <header class="flyer-header">
+            <div class="flyer-logo">
+                <img src="https://storage.googleapis.com/buteos-res/bs_logo_nobg.png" alt="Buteos Systems">
+            </div>
+            <div>
+            <h1>Cutting-Edge Digital Solutions</h1>
+            <p class="sub-headline">Websites | Mobile Apps | AI Agents</p>
+            </div>
+        </header>
+
+
+        <main class="flyer-body">
+            <p class="services-intro">
+                We empower businesses like yours with bespoke digital tools designed for growth, efficiency, and engagement.
+            </p>
+            <div class="services-grid">
+                <div>
+                    <h3>Websites</h3>
+                    <p>Engaging, responsive websites that convert visitors into customers.</p>
+                </div>
+                <div>
+                    <h3>Mobile Apps</h3>
+                    <p>Custom iOS & Android apps to connect with your audience anywhere.</p>
+                </div>
+                <div>
+                    <h3>AI Agents</h3>
+                    <p>Intelligent automation to streamline communication and boost service.</p>
+                </div>
+            </div>
+
+            <h2>Unlock Key Benefits:</h2>
+            <ul class="benefits-list">
+                <li>Elevate your brand with a professional online presence.</li>
+                <li>Increase efficiency through smart automation.</li>
+                <li>Engage customers with seamless mobile experiences.</li>
+                <li>Future-proof your business with scalable technology.</li>
+            </ul>
+        </main>
+
+        <footer class="flyer-footer">
+            <div class="footer-cta-text">Ready to Innovate?</div>
+            <p class="footer-cta-subtext">Let's discuss how our expertise can fuel your success.</p>
+
+            <div class="website-url">
+                <a href="https://buteossystems.com">buteossystems.com</a>
+            </div>
+            <p style="font-size: 14px; color: var(--text-light); margin-top: 15px;">
+                Contact us: seth@buteossystems.com | 832-802-0429
+            </p>
+            <p style="font-size: 12px; color: var(--text-light); margin-top: 20px;">
+                &copy; 2025 Buteos Systems. All Rights Reserved.
+            </p>
+            <div class="qr-code-container">
+                <img src="https://storage.googleapis.com/buteos-res/bscom.png" alt="Scan to visit Buteos Systems">
+                <p>Scan to Explore</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

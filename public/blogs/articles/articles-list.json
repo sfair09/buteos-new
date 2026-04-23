@@ -1,0 +1,42 @@
+[
+    {
+      "id": 1,
+      "title": "The AI Awakening in Business: More Than Just Hype",
+      "excerpt": "Leveraging AI to create more efficient processes, deliver superior customer experiences, and unlock unprecedented levels of innovation.",
+      "author": "Seth Fair, Buteo Systems CEO",
+      "date": "May 15, 2025",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+    },
+    {
+      "id": 2,
+      "title": "Your New Superpowered Teammates: How AI Agents Are Revolutionizing Business Operations",
+      "excerpt": "The AI Agents of 2025 are sophisticated, specialized, and ready to become your business's new superpowered teammates.",
+      "author": "Seth Fair, Buteos Sysytems CEO",
+      "date": "May 15, 2025",
+      "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3"
+    },
+    {
+      "id": 3,
+      "title": "The Mobile-First Mandate: Why Your Business's Front Door is Now in Their Pocket",
+      "excerpt": "This isn't just a catchy phrase; it's a fundamental business imperative.",
+      "author": "Seth Fair, Buteos Systems CEO",
+      "date": "May 15, 2025",
+      "image": "https://images.unsplash.com/photo-1535378620166-273708d44e4c"
+    },
+    {
+      "id": 4,
+      "title": "Bring Your App Idea to Life with AI: A Beginner's Guide",
+      "excerpt": "No Coding Degree Needed!(until it is...)",
+      "author": "Seth Fair, Buteos Systems CEO",
+      "date": "May 19, 2025",
+      "image": "https://storage.googleapis.com/buteos-systems-res/images/ai-write-app-image.jpg"
+    },
+    {
+      "id": 5,
+      "title": "5 Ways Houston Restaurants Can Fight Rising Food Costs with AI",
+      "excerpt": "Discover how AI can transform Houston restaurants' battle against rising food costs, turning challenges into opportunities for growth and resilience.",
+      "author": "Seth Fair, Buteos Systems CEO",
+      "date": "June 15, 2025",
+      "image": "https://storage.googleapis.com/buteos-systems-res/images/ai-food-cost-helper-article-image.png"
+    }
+  ]

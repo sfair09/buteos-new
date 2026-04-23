@@ -1,0 +1,78 @@
+{
+    "id": 1,
+    "title": "Your Article Title Here",
+    "excerpt": "A brief summary or enticing snippet of your article content.",
+    "content": [
+        {
+            "id": "block_1",
+            "type": "image",
+            "data": {
+                "file_url": "/images/your_image_1.jpg",
+                "alt_text": "Descriptive alt text for image 1",
+                "caption": "Optional caption for image 1"
+            }
+        },
+        {
+            "id": "block_2",
+            "type": "header",
+            "level": 2,
+            "text": "Your First Section Header Here"
+        },
+        {
+            "id": "block_3",
+            "type": "paragraph",
+            "text": "This is the content for your first section. It can contain multiple sentences and paragraphs within this block, or you can break it into multiple paragraph blocks if needed. For example, you might have introductory text here."
+        },
+        {
+            "id": "block_4",
+            "type": "image",
+            "data": {
+                "file_url": "/images/your_image_1.jpg",
+                "alt_text": "Descriptive alt text for image 1",
+                "caption": "Optional caption for image 1"
+            }
+        },
+        {
+            "id": "block_5",
+            "type": "header",
+            "level": 3,
+            "text": "A Sub-Section Header Example"
+        },
+        {
+            "id": "block_6",
+            "type": "paragraph",
+            "text": "More content for your sub-section. You can add more paragraphs, lists, or other block types as needed to build out your article."
+        },
+        {
+            "id": "block_7",
+            "type": "list",
+            "style": "unordered",
+            "items": [
+                "List item 1",
+                "List item 2",
+                "List item 3"
+            ]
+        },
+        {
+            "id": "block_8",
+            "type": "code",
+            "language": "javascript",
+            "text": "console.log('Hello, world!');\n// This is an example of a code block"
+        },
+        {
+            "id": "block_9",
+            "type": "quote",
+            "text": "The only way to do great work is to love what you do.",
+            "cite": "Steve Jobs"
+        }
+    ],
+    "author": "Your Name/Alias Here",
+    "date": "2025-05-20",
+    "main_image": {
+        "file_url": "/images/main_article_banner.jpg",
+        "alt_text": "Main image for the article"
+    },
+    "tags": ["web design", "fiverr", "blogging", "json structure"],
+    "categories": ["Technology", "Freelancing"],
+    "slug": "how-to-format-article-json-for-blog"
+}

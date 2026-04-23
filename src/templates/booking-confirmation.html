@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Appointment Confirmation - Buteos Systems</title>
+    <style type="text/css">
+        /* Color Theme Variables */
+        :root {
+            --primary: #13699a;
+            --primary-light: #3b82f6;
+            --accent: #7c3aed;
+            --accent-blue: #3b82f6;
+            --text: #ffffff;
+            --text-light: #e0e0e0;
+            --background: #0a0a0a;
+            --background-alt: #1a1a1a;
+            --card-bg: #222222;
+            --card-hover: #22c2e5;
+            --card-text: #ffffff;
+            --card-shadow: rgba(34, 194, 229, 0.3);
+        }
+
+        /* Basic Reset */
+        body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+        table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table { border-collapse: collapse !important; }
+        body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+        /* Mobile Responsive Styles */
+        @media screen and (max-width: 600px) {
+            .email-container {
+                width: 100% !important;
+                margin: auto !important;
+            }
+            .fluid, .fluid-centered {
+                max-width: 100% !important;
+                height: auto !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            .stack-column, .stack-column-center {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                direction: ltr !important;
+            }
+            .stack-column-center {
+                text-align: center !important;
+            }
+            .header-logo img {
+                max-width: 150px !important;
+            }
+            .cta-button a {
+                padding: 12px 20px !important;
+                font-size: 16px !important;
+            }
+        }
+
+        /* Main Styles */
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .email-body {
+            background-color: #0a0a0a;
+        }
+        .preheader {
+            display: none;
+            font-size: 1px;
+            color: #ffffff;
+            line-height: 1px;
+            max-height: 0px;
+            max-width: 0px;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .header-logo {
+            padding: 25px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+        }
+        .header-logo img {
+            max-width: 200px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+        .content-padding {
+            padding: 25px 30px;
+        }
+        h1, h2, h3 {
+            margin-top: 0;
+            color: #ffffff;
+        }
+        h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .highlight-text {
+            color: #3b82f6;
+            font-weight: 500;
+        }
+        .content-section {
+            background-color: #222222;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-left: 3px solid #13699a;
+        }
+        .cta-button table {
+            margin: 25px auto;
+        }
+        .cta-button a {
+            background: linear-gradient(135deg, #13699a, #3b82f6);
+            color: #ffffff !important;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(34, 194, 229, 0.3);
+            transition: all 0.3s ease;
+        }
+        .signature {
+            padding-top: 20px;
+            color: #ffffff;
+            border-top: 1px solid #1a1a1a;
+            margin-top: 20px;
+        }
+        .footer {
+            padding: 20px 30px;
+            font-size: 12px;
+            color: #e0e0e0;
+            text-align: center;
+            background-color: #1a1a1a;
+            border-top: 3px solid #13699a;
+        }
+        .footer a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #13699a, transparent);
+            margin: 10px 0 20px;
+        }
+        .appointment-details {
+            background-color: #222222;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 3px solid #3b82f6;
+        }
+        .appointment-details p {
+            margin: 5px 0;
+        }
+        .appointment-details strong {
+            color: #3b82f6;
+        }
+        .calendar-button {
+            display: inline-block;
+            margin: 10px 5px;
+            padding: 10px 20px;
+            background-color: #222222;
+            border: 1px solid #3b82f6;
+            border-radius: 5px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .calendar-button:hover {
+            background-color: #3b82f6;
+        }
+        .calendar-button img {
+            vertical-align: middle;
+            margin-right: 5px;
+            width: 16px;
+            height: 16px;
+        }
+    </style>
+</head>
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #0a0a0a;">
+    <center style="width: 100%; background-color: #0a0a0a;">
+        <div class="preheader" style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+            Your appointment with Buteos Systems has been confirmed. Add it to your calendar.
+        </div>
+
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="margin: auto; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.3);" class="email-container">
+            <tr>
+                <td style="background-color: #0a0a0a;" class="email-body">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                            <td class="header-logo" style="padding: 25px 0; text-align: center;">
+                                <img src="https://storage.googleapis.com/buteos-res/bs_logo_nobg.png" alt="Buteos Systems" style="max-width: 200px;">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="padding: 0;">
+                                <div style="height: 4px; background: linear-gradient(90deg, #13699a, #3b82f6);"></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="padding: 25px 30px;" class="content-padding">
+                                <h2 style="margin-top:0; font-size: 22px; color: #ffffff;">Appointment Confirmed!</h2>
+                                <p style="margin-bottom: 15px;">
+                                    Your consultation with <span class="highlight-text">Buteos Systems</span> has been successfully scheduled. We're looking forward to discussing your digital transformation needs.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="padding: 0 30px;" class="content-padding">
+                                <div class="appointment-details">
+                                    <h3 style="color: #3b82f6; margin-top: 0; margin-bottom: 15px;">Appointment Details</h3>
+                                    <p><strong>Date:</strong> [Date]</p>
+                                    <p><strong>Time:</strong> [Time]</p>
+                                    <p><strong>Duration:</strong> 30 minutes</p>
+                                    <p><strong>Service:</strong> [Service Type]</p>
+                                    <p><strong>Consultant:</strong> [Consultant Name]</p>
+                                    <p><strong>Location:</strong> Virtual Meeting (Zoom)</p>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="padding: 0 30px 20px 30px; text-align: center;" class="content-padding">
+                                <div class="divider"></div>
+                                <p style="margin-top: 20px; margin-bottom: 15px; font-size: 16px;">
+                                    Add this appointment to your calendar:
+                                </p>
+                                <div style="margin: 20px 0;">
+                                    <a href="[Google Calendar Link]" class="calendar-button" target="_blank">
+                                        <img src="https://storage.googleapis.com/buteos-res/google-calendar.png" alt="Google Calendar">
+                                        Google Calendar
+                                    </a>
+                                    <a href="[Outlook Calendar Link]" class="calendar-button" target="_blank">
+                                        <img src="https://storage.googleapis.com/buteos-res/outlook-calendar.png" alt="Outlook Calendar">
+                                        Outlook Calendar
+                                    </a>
+                                    <a href="[iCal Link]" class="calendar-button" target="_blank">
+                                        <img src="https://storage.googleapis.com/buteos-res/ical.png" alt="iCal">
+                                        iCal
+                                    </a>
+                                </div>
+                                <p style="margin-top: 20px; margin-bottom: 0; font-size: 16px;">
+                                    A calendar invitation with the Zoom meeting link will be sent to your email shortly.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="padding: 25px 30px 30px 30px;" class="content-padding signature">
+                                <p style="margin-bottom: 5px;">Best regards,</p>
+                                <p style="margin-bottom: 5px; font-weight: bold;">Buteos Systems Team</p>
+                                <p style="margin-bottom: 5px;">Digital Solutions Experts</p>
+                                <p style="margin-bottom: 0;"><a href="https://buteossystems.com" style="color: #3b82f6; text-decoration: none;">buteossystems.com</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center; padding: 20px 30px; background-color: #1a1a1a;" class="footer">
+                    <p style="margin-bottom: 5px; font-size: 12px; color: #e0e0e0;">
+                        Buteos Systems | Houston, TX
+                    </p>
+                    <p style="margin-bottom: 5px; font-size: 12px; color: #e0e0e0;">
+                        <a href="https://buteossystems.com/contact" style="color: #3b82f6; text-decoration: none;">Unsubscribe</a>
+                        &nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="https://buteossystems.com/privacy" style="color: #3b82f6; text-decoration: none;">Privacy Policy</a>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html> 

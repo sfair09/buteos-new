@@ -1,0 +1,99 @@
+{
+  "name": "Buteos Systems",
+  "tagline": "Precision Digital Strategy, Unmatched Vision",
+  "foundedYear": 2023,
+  "services": [
+    "Web Development",
+    "Mobile Application Development",
+    "Digital Marketing",
+    "AI Solutions",
+    "Business Intelligence",
+    "Custom Software Development"
+  ],
+  "history": "Founded in 2023, Buteos Systems is dedicated to revolutionizing digital presence and business efficiency through cutting-edge technology solutions. We believe in making complex technology accessible and impactful, providing businesses with the tools they need to thrive in the digital landscape.",
+  "contact": {
+    "phone": "832-705-2797",
+    "email": "info@buteossystems.com",
+    "address": "Houston, TX 77034",
+    "website": "www.buteossystems.com"
+  },
+  "products": [
+    {
+      "name": "Buteos Nest",
+      "description": "Your Foundation for Digital Excellence. Scalable, Secure, and Built to Engage.",
+      "features": [
+        "Website Hosting & Security",
+        "Foundational SEO",
+        "Google Business Profile Management",
+        "Social Media Management (2 platforms)",
+        "Basic Reputation Monitoring"
+      ],
+      "price": "Contact us for a quote"
+    },
+    {
+      "name": "Buteos Flight",
+      "description": "Intelligence that Elevates. Automate, Analyze, and Accelerate Your Business.",
+      "features": [
+        "Advanced SEO & Content Creation",
+        "Google & Meta Ad Management",
+        "Email Marketing Campaigns",
+        "Marketing Automation",
+        "Proactive Reputation Management",
+        "All Digital Foundation Services"
+      ],
+      "price": "Contact us for a quote"
+    },
+    {
+      "name": "Buteos Talon",
+      "description": "Your Vision, Forged into Reality. Uncompromising Solutions for Unique Challenges.",
+      "features": [
+        "Custom AI Solutions",
+        "Advanced Analytics & Business Intelligence",
+        "Strategic Partnership & Support",
+        "Quarterly Business Reviews",
+        "Priority Support",
+        "All Growth Partnership Services"
+      ],
+      "price": "Contact us for a quote"
+    },
+    {
+      "name": "Mobile Applications",
+      "description": "Put your business in your customers' pockets with powerful, engaging mobile applications",
+      "packages": [
+        {
+          "name": "Fledgling Package",
+          "features": [
+            "Custom Design",
+            "Cross-Platform (iOS & Android)",
+            "5 Core Screens",
+            "App Store Deployment"
+          ]
+        },
+        {
+          "name": "Soar Package",
+          "features": [
+            "User Authentication",
+            "In-App E-commerce",
+            "API Integrations",
+            "Push Notifications"
+          ]
+        },
+        {
+          "name": "Aerie Package",
+          "features": [
+            "Advanced Security",
+            "Offline Access",
+            "Multilingual Support",
+            "Performance Optimization"
+          ]
+        }
+      ],
+      "price": "Contact us for a quote"
+    }
+  ],
+  "officeHours": "Monday to Friday, 9:00 AM to 5:00 PM (Central Time). Weekends by appointment only.",
+  "mission": "To empower businesses with intelligent automation and technology-driven insights, fostering growth and enhancing customer experiences.",
+  "values": ["Innovation", "Customer-Centricity", "Integrity", "Collaboration"],
+  "careers": "We're always looking for talented individuals passionate about technology! Check our website or email careers@buteossystems.com for current openings.",
+  "defaultInfo": "Buteos Systems specializes in comprehensive digital solutions to enhance business operations and customer engagement. We offer services ranging from web development and mobile applications to AI solutions and digital marketing. Our office hours are Monday to Friday, 9 AM to 5 PM CT. You can find more about our products and services by asking specific questions or visiting our website."
+}

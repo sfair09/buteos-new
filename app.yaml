@@ -1,0 +1,12 @@
+runtime: nodejs20
+
+env_variables:
+  NODE_ENV: "production"
+  IONOS_SMTP_HOST: "smtp.ionos.com"
+  IONOS_SMTP_PORT: "587"
+  
+
+instance_class: F1
+automatic_scaling:
+  min_instances: 1
+  max_instances: 10
